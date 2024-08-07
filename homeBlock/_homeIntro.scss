@@ -1,0 +1,76 @@
+.intro {
+  width: 100%;
+  background-color: #115764;
+
+  background-image: url("../img/intro-left-bg.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &__wrapper {
+    @extend %Display;
+    padding-top: 100px !important;
+    width: 1100px;
+    min-height: 50vh;
+    margin: auto;
+
+    background-image: url("../img/bottomIntro.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+  &__title {
+    /* Find the best talent */
+
+    width: 500px;
+
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 100px;
+    /* or 100% */
+
+    color: #ffffff;
+  }
+  &__span {
+    color: chocolate;
+  }
+  &__hr {
+    width: 50px;
+  }
+  &__text {
+    /* Finding the right pe */
+    width: 500px;
+    margin-top: 50px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1100px) {
+  .intro {
+    background-image: none;
+    &__wrapper {
+      flex-direction: column;
+      width: 90%;
+      min-height: 30vh;
+    }
+    &__title {
+      width: 100%;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 55px;
+    }
+    &__text {
+      width: 100%;
+      font-size: 1rem;
+      text-align: center;
+    }
+    &__hr {
+      display: none;
+    }
+  }
+}
